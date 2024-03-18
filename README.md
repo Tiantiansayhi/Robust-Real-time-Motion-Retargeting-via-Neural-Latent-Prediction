@@ -1,7 +1,10 @@
 # Robust-Real-time-Motion-Retargeting-via-Neural-Latent-Prediction
 Code for the paper acceptted in 2023IROS "Robust Real-Time Motion Retargeting via Neural Latent Prediction" [here](https://ieeexplore.ieee.org/abstract/document/10342022)
+
 It contains two models: Motion Sequence Retargeting and prediction in latent space
+
 1.Motion Sequence Retargeting:Realize motion sequence retargeting from human motion sequence to robot motion sequence.
+
 2.Prediction in latent space:Predict latent sequence to guide advanced control
 
 ## Prerequisite
