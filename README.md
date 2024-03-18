@@ -15,11 +15,7 @@ It contains two models: Motion Sequence Retargeting and prediction in latent spa
 
 The Chinese sign language dataset can be downloaded [here](https://www.jianguoyun.com/p/DYm5RzMQ74eHChj_lJ0E).
 
-"""
-## Model
 
-The pretrained model can be downloaded here.
-"""
 ## Citation
 
 If you find this project useful in your research, please cite this paper.
