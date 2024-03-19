@@ -1,11 +1,6 @@
-# Robust-Real-time-Motion-Retargeting-via-Neural-Latent-Prediction
-Code for the paper acceptted in 2023IROS "Robust Real-Time Motion Retargeting via Neural Latent Prediction" [here](https://ieeexplore.ieee.org/abstract/document/10342022)
+# Multi-frame motion Neural Retargeting
 
-It contains two models: Motion Sequence Retargeting and prediction in latent space
-
-1.Motion Sequence Retargeting:Realize motion sequence retargeting from human motion sequence to robot motion sequence.
-
-2.Prediction in latent space:Predict latent sequence to guide advanced control
+Code of "Motion Sequence Retargeting" part for the paper acceptted in 2023IROS "Robust Real-Time Motion Retargeting via Neural Latent Prediction" [here](https://ieeexplore.ieee.org/abstract/document/10342022)
 
 ## Prerequisite
 
@@ -14,22 +9,31 @@ It contains two models: Motion Sequence Retargeting and prediction in latent spa
 - [**Kornia**](https://github.com/kornia/kornia) a differentiable computer vision library for PyTorch.
 - [**HDF5 for Python**](https://docs.h5py.org/en/stable/) The h5py package is a Pythonic interface to the HDF5 binary data format.
 
+
 ## Dataset
 
 The Chinese sign language dataset can be downloaded [here](https://www.jianguoyun.com/p/DYm5RzMQ74eHChj_lJ0E).
 
+## Model
 
-## Citation
+The pretrained model can be downloaded here.
 
-If you find this project useful in your research, please cite this paper.
+## Get Started
 
+**Training**
+```bash
+CUDA_VISIBLE_DEVICES=0 python main.py --cfg './configs/train/yumi.yaml'
 ```
-@article{wang2023robust,
-  title={Robust Real-Time Motion Retargeting via Neural Latent Prediction},
-  author={Wang, Tiantian and Zhang, Haodong and Chen, Lu and Wang, Dongqi and Wang, Yue and Xiong, Rong},
-  booktitle={2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-  pages={3696--3703},
-  year={2023},
-  organization={IEEE}
-}
+
+**Inference**
+inference one key:
+```bash
+CUDA_VISIBLE_DEVICES=0 python inference.py --cfg './configs/inference/yumi.yaml' 
 ```
+
+inference all keys:
+```bash
+CUDA_VISIBLE_DEVICES=0 python inference_all.py --cfg './configs/inference/yumi.yaml' 
+```
+
+
