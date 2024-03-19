@@ -1,0 +1,44 @@
+DATASET:
+  TEST:
+    SOURCE_NAME: "SignAll"
+    SOURCE_PATH: "/home/wtt/Data/multi-frame/sign-all/test"
+    TARGET_NAME: "YumiAll"
+    TARGET_PATH: "/home/wtt/Data/multi-frame/sign-all/target/yumi-all"
+MODEL:
+  NAME: "YumiNet"
+  # CHECKPOINT: "/home/wtt/Data/multi-frame/model/last_model_epoch_0019.pth"
+  CHECKPOINT: "/home/wtt/Data/multi-frame/model/best_model_epoch_0011.pth"
+HYPER:
+  EPOCHS: 200
+  BATCH_SIZE: 4
+  LEARNING_RATE: 0.00002
+  PERIOD: 5
+LOSS:
+  EE: True
+  VEC: True
+  ORI: True
+  FIN: True
+  COL: True
+  COL_THRESHOLD: 0.15
+  REG: True
+  SMO: True
+  SMOOTHNESS: 0.2
+INFERENCE:
+  MOTION:
+    SOURCE: '/home/wtt/Data/multi-frame/sign-all/test/h5/yumi_intro_YuMi.h5'
+    # SOURCE: '/home/wtt/Data/multi-frame/sign-all/test/h5/yiyuan_YuMi.h5'
+    # SOURCE: '/home/wtt/Data/multi-frame/sign-all/train/h5/banliyewu_YuMi.h5'
+    # SOURCE: '/home/wtt/Data/multi-frame/sign-all/train/h5/wenlu_xihu_YuMi.h5'
+    # SOURCE: '/home/wtt/Data/multi-frame/sign-all/train/h5/wenlu_huochedongzhan_YuMi.h5'
+    # KEY: '玉米介绍语句１'
+    # KEY: '玉米-yumi'
+    # KEY: '的-de'
+    # KEY: '帮忙-bangmang'
+    # KEY: '办理-banli'
+  H5:
+    BOOL: True
+    PATH: '/home/wtt/Data/multi-frame/dataset/op'
+OTHERS:
+  LOG: "/home/wtt/Data/multi-frame/saved/log/yumi"
+  SUMMARY: "/home/wtt/Data/multi-frame/saved/runs/yumi"
+  LOG_INTERVAL: 100

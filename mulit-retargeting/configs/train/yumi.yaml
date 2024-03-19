@@ -1,0 +1,33 @@
+DATASET:
+  TRAIN:
+    SOURCE_NAME: "SignAll"
+    SOURCE_PATH: "/home/wtt/Data/multi-frame/sign-all/train"
+    TARGET_NAME: "YumiAll"
+    TARGET_PATH: "/home/wtt/Data/multi-frame/sign-all/target/yumi-all"
+  TEST:
+    SOURCE_NAME: "SignAll"
+    SOURCE_PATH: "/home/wtt/Data/multi-frame/sign-all/test"
+    TARGET_NAME: "YumiAll"
+    TARGET_PATH: "/home/wtt/Data/multi-frame/sign-all/target/yumi-all"
+MODEL:
+  NAME: "YumiNet"
+HYPER:
+  EPOCHS: 20
+  BATCH_SIZE: 4
+  LEARNING_RATE: 0.00005
+  PERIOD: 5
+LOSS:
+  EE: True
+  VEC: True
+  ORI: True
+  FIN: True
+  COL: True
+  COL_THRESHOLD: 0.15
+  REG: True
+  SMO: True
+  SMOOTHNESS: 0.2
+OTHERS:
+  SAVE: "/home/wtt/Data/multi-frame/model"
+  LOG: "/home/wtt/Data/multi-frame/saved/log/yumi"
+  SUMMARY: "/home/wtt/Data/multi-frame/saved/runs/yumi"
+  LOG_INTERVAL: 100
