@@ -1,6 +1,6 @@
 # Multi-frame motion Neural Retargeting
 
-Code of "Motion Sequence Retargeting" part for the paper acceptted in 2023IROS "Robust Real-Time Motion Retargeting via Neural Latent Prediction" [here](https://ieeexplore.ieee.org/abstract/document/10342022)
+Code of "Motion Sequence Retargeting" part for the paper accepted in 2023IROS "Robust Real-Time Motion Retargeting via Neural Latent Prediction" [here](https://ieeexplore.ieee.org/abstract/document/10342022)
 
 ## Prerequisite
 
@@ -16,7 +16,7 @@ The Chinese sign language dataset can be downloaded [here](https://www.jianguoyu
 
 ## Model
 
-The pretrained model can be downloaded here.
+The pretrained retargeting model can be downloaded [here](https://www.jianguoyun.com/p/DR5gmJ0QosW7DBidyrsFIAA)
 
 ## Get Started
 
