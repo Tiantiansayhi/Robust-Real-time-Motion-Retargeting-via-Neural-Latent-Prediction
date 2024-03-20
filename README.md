@@ -16,7 +16,7 @@ The Chinese sign language dataset can be downloaded [here](https://www.jianguoyu
 
 ## Model
 
-The pretrained predicted model can be downloaded here.
+The pretrained prediction model can be downloaded [here](https://www.jianguoyun.com/p/Dc6_7pkQosW7DBiayrsFIAA)
 
 ## Get Started
 
