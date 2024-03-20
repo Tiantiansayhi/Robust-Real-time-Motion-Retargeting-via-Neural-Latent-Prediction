@@ -26,6 +26,7 @@ CUDA_VISIBLE_DEVICES=0 python main.py --cfg './configs/train/yumi.yaml'
 ```
 
 **Inference**
+
 inference one key:
 ```bash
 CUDA_VISIBLE_DEVICES=0 python inference.py --cfg './configs/inference/yumi.yaml' 
