@@ -1,0 +1,103 @@
+DATASET:
+  TEST:
+    SOURCE_NAME: "TestAll"
+    SOURCE_PATH: "/home/wtt/Data/mult_frame_with_pre/sign-all/test"
+    TARGET_NAME: "YumiAll"
+    TARGET_PATH: "/home/wtt/Data/mult_frame_with_pre/sign-all/target/yumi-all"
+
+MODEL:
+  NAME: "PredictNet"
+  CHECKPOINT: "/home/wtt/Data/mult_frame_with_pre/saved/models/best_model_epoch_0015.pth"
+  # CHECKPOINT: "/home/wtt/Data/mult_frame_with_pre/saved/models/last_model_epoch_0019.pth"
+
+RETARGET: 
+  NAME: "YumiNet"
+  CHECKPOINT: "/home/wtt/Data/multi-frame/model/best_model_epoch_0011.pth"
+
+HYPER:
+  EPOCHS: 20
+  BATCH_SIZE: 4
+  LEARNING_RATE: 0.00003
+  PERIOD: 5
+  
+LOSS:
+  ARM_JOI: True
+  FIN_JOI: True
+
+INFERENCE:
+  MOTION:
+    HUMAN: '/home/wtt/Data/mult_frame_with_pre/sign-all/test/h5/yumi_intro_YuMi.h5'
+    LABEL: '/home/wtt/Data/multi-frame/dataset/1209test/test/intro'
+    # LABEL: '/home/wtt/Data/label/test/yumi_intro.h5'
+
+    # HUMAN: '/home/wtt/Data/mult_frame_with_pre/sign-all/test/h5/yiyuan_YuMi.h5'
+    # LABEL: '/home/wtt/Data/multi-frame/dataset/1209test/test/yiyuan'
+
+    # HUMAN: '/home/wtt/Data/pre_in_latent_mult/sign-all/train/h5/banliyewu_YuMi.h5'
+    # CVA: '/home/wtt/Data/online_result/pre/cva/action/92601_intro_cva.h5'
+
+    # KEY: '玉米介绍语句１'
+    # KEY: '大学-daxue'
+    # KEY: '办理-banli'
+    KEY: '玉米-yumi'
+    # KEY: '哪里-nali'
+    # KEY: '会-hui'
+  H5:
+    BOOL: True
+    # PATH: '/home/wtt/Data/mult_frame_with_pre/test'
+
+
+OTHERS:
+  LOG: '/home/wtt/Data/mult_frame_with_pre/saved/log'
+  SUMMARY: '/home/wtt/Data/mult_frame_with_pre/saved/runs'
+  LOG_INTERVAL: 100
+
+
+
+# =========制作latent space数据==============
+# DATASET:
+#   TEST:
+#     SOURCE_NAME: "SignAll"
+#     SOURCE_PATH: "/home/wtt/Data/pre_in_latent/sign-all/test"
+#     TARGET_NAME: "YumiAll"
+#     TARGET_PATH: "/home/wtt/Data/pre_in_latent/sign-all/target/yumi-all"
+# MODEL:
+#   NAME: "YumiNet"
+#   # CHECKPOINT: "/home/wtt/Data/pre_in_latent/model_retarget/yumi/best_model_epoch_0003.pth"
+#   CHECKPOINT: "/home/wtt/Data/ddq_result/saved/models/yumi/best_model_epoch_0003.pth"
+# HYPER:
+#   EPOCHS: 200
+#   BATCH_SIZE: 16
+#   LEARNING_RATE: 0.00003
+# LOSS:
+#   EE: True
+#   VEC: True
+#   ORI: True
+#   FIN: True
+#   COL: True
+#   COL_THRESHOLD: 0.15
+#   REG: True
+# INFERENCE:
+#   MOTION:
+#   #train
+#     # SOURCE: '/home/wtt/Data/pre_in_latent/sign-all/train/h5/banliyewu_YuMi.h5'
+#     # SOURCE: '/home/wtt/Data/pre_in_latent/sign-all/train/h5/wenlu_huochedongzhan_YuMi.h5'
+#     # SOURCE: '/home/wtt/Data/pre_in_latent/sign-all/train/h5/wenlu_xihu_YuMi.h5'
+#   #test
+#     # SOURCE: '/home/wtt/Data/pre_in_latent/sign-all/test/h5/yumi_intro_YuMi.h5'
+#     SOURCE: '/home/wtt/Data/pre_in_latent/sign-all/test/h5/yiyuan_YuMi.h5'
+#     # KEY: '玉米-yumi'
+#   H5:
+#     BOOL: True
+#     #train
+#     # PATH: '/home/wtt/Data/pre_in_latent_mult/model_retarget/initial_z/train/banliyewu'
+#     # PATH: '/home/wtt/Data/pre_in_latent_mult/model_retarget/initial_z/train/wenluhuochedongzhan'
+#     # PATH: '/home/wtt/Data/pre_in_latent_mult/model_retarget/initial_z/train/wenluxihu'
+#     #test
+#     # PATH: '/home/wtt/Data/pre_in_latent_mult/model_retarget/initial_z/test/intro'
+#     PATH: '/home/wtt/Data/pre_in_latent_mult/model_retarget/initial_z/test/yiyuan'
+#     # PATH: '/home/wtt/Data/data_test'
+# OTHERS:
+#   LOG: "/home/wtt/Data/pre_in_latent/model_retarget/saved/log"
+#   SUMMARY: "/home/wtt/Data/pre_in_latent/model_retarget/saved/runs"
+#   LOG_INTERVAL: 100

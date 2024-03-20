@@ -1,0 +1,35 @@
+DATASET:
+  TRAIN:
+    SOURCE_NAME: "TrainAll"
+    SOURCE_PATH: "/home/wtt/Data/mult_frame_with_pre/sign-all/train"
+    TARGET_NAME: "YumiAll"
+    TARGET_PATH: "/home/wtt/Data/mult_frame_with_pre/sign-all/target/yumi-all"
+  
+  TEST:
+    SOURCE_NAME: "TestAll"
+    SOURCE_PATH: "/home/wtt/Data/mult_frame_with_pre/sign-all/test"
+    TARGET_NAME: "YumiAll"
+    TARGET_PATH: "/home/wtt/Data/mult_frame_with_pre/sign-all/target/yumi-all"
+
+MODEL:
+  NAME: "PredictNet"
+
+RETARGET:
+  NAME: "YumiNet"
+  CHECKPOINT: "/home/wtt/Data/multi-frame/model/best_model_epoch_0011.pth"
+
+HYPER:
+  EPOCHS: 20
+  BATCH_SIZE: 16
+  LEARNING_RATE: 0.0005
+  PERIOD: 5
+  
+LOSS:
+  ARM_JOI: True
+  FIN_JOI: True
+
+OTHERS:
+  SAVE: "/home/wtt/Data/mult_frame_with_pre/last_version_model"
+  LOG: "/home/wtt/Data/mult_frame_with_pre/saved/log"
+  SUMMARY: "/home/wtt/Data/mult_frame_with_pre/saved/runs"
+  LOG_INTERVAL: 100
